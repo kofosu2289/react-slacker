@@ -40,7 +40,7 @@ class MessageForm extends React.Component {
   };
 
   handleKeyDown = event => {
-    if (event.ctrlKey && event.keyCode === 13) {
+    if (event.keyCode === 13) {
       this.sendMessage();
     }
 
@@ -205,7 +205,7 @@ class MessageForm extends React.Component {
   };
 
   render() {
-    // prettier-ignore
+    
     const { errors, message, loading, modal, uploadState, percentUploaded, emojiPicker } = this.state;
 
     return (
@@ -246,13 +246,13 @@ class MessageForm extends React.Component {
           <Button
             onClick={this.sendMessage}
             disabled={loading}
-            color="orange"
+            color="grey"
             content="Add Reply"
             labelPosition="left"
             icon="edit"
           />
           <Button
-            color="teal"
+            color="black"
             disabled={uploadState === "uploading"}
             onClick={this.openModal}
             content="Upload Media"
